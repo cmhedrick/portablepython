@@ -26,7 +26,7 @@
 InstType "Full"
 InstType "Minimal"
 
-Section "!Python 2.7.6 core" PYTHON_CORE
+Section "!Python 2.7.8 core" PYTHON_CORE
 	SectionIn 1 2 RO
 	SetOutPath "$INSTDIR"
 	File /r "${SOURCESFOLDER}\python-core\*.*"
@@ -35,17 +35,17 @@ Section "!Python 2.7.6 core" PYTHON_CORE
 	File "${SOURCESFOLDER}\IDLE-Portable.exe"
 SectionEnd
 SectionGroup "Modules"
-	Section "NumPy 1.8.1" MODULE_NUMPY
+	Section "NumPy 1.9.0" MODULE_NUMPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\numpy\PLATLIB\*.*"
 	SectionEnd
-	Section "SciPy 0.13.3" MODULE_SCIPY
+	Section "SciPy 0.14.0" MODULE_SCIPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\scipy\PLATLIB\*.*"
 	SectionEnd
-	Section "PyWin32 218" MODULE_PYWIN32
+	Section "PyWin32 219" MODULE_PYWIN32
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\pywin32\*.*"
@@ -55,14 +55,14 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\networkx\"
 		File /r "${SOURCESFOLDER}\networkx\networkx\*.*"
 	SectionEnd
-	Section "Django 1.6.2" MODULE_DJANGO
+	Section "Django 1.7" MODULE_DJANGO
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\django\"
-		File /r "${SOURCESFOLDER}\django\Django-1.6.2\django\*.*"
+		File /r "${SOURCESFOLDER}\django\Django-1.7\django\*.*"
 		SetOutPath "$INSTDIR\App\Scripts"
-		File "${SOURCESFOLDER}\django\Django-1.6.2\django\bin\django-admin.py"
+		File "${SOURCESFOLDER}\django\Django-1.7\django\bin\django-admin.py"
 	SectionEnd
-	Section "PIL 1.1.7" MODULE_PIL
+	Section "Pillow-2.5.3" MODULE_PIL
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pil\PLATLIB\*.*"
@@ -72,17 +72,17 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\py2exe\PLATLIB\*.*"
 	SectionEnd
-	Section "wxPython 3.0.0.0" MODULE_WXPYTHON
+	Section "wxPython 3.0.1.1" MODULE_WXPYTHON
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\wxpython\package\*.*"
 	SectionEnd
-	Section "matplotlib 1.3.1" MODULE_MATPLOTLIB
+	Section "matplotlib 1.4.0" MODULE_MATPLOTLIB
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\matplotlib\PLATLIB\*.*"
 	SectionEnd
-	Section "lxml 3.3.4" MODULE_LXML
+	Section "lxml 3.4.0" MODULE_LXML
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\lxml\PLATLIB\*.*"
@@ -109,7 +109,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\Glade3-Portable.exe"
 	SectionEnd
-	Section "PyQT 4.10.4" MODULE_PYQT
+	Section "PyQT 4.11.2" MODULE_PYQT
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\"
 		File /r "${SOURCESFOLDER}\pyqt\Lib\*.*"
@@ -120,16 +120,16 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\QtDesigner-Portable.exe"
 	SectionEnd
-	Section "IPython 1.2.1" MODULE_IPYTHON
+	Section "IPython 2.2.0" MODULE_IPYTHON
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\IPython"
-		File /r "${SOURCESFOLDER}\ipython\\ipython-1.2.1\IPython\*.*"
+		File /r "${SOURCESFOLDER}\ipython\\ipython-2.2.0\IPython\*.*"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyreadline\pyreadline-1.7.1\*.*"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\IPython-Portable.exe"
 	SectionEnd
-	Section "Pandas 0.13.1" MODULE_PANDAS
+	Section "Pandas 0.14.1" MODULE_PANDAS
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pandas\PLATLIB\*.*"
@@ -139,35 +139,35 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\dateutil\"
 		File /r "${SOURCESFOLDER}\dateutil\python-dateutil-2.2\dateutil\*.*"
 	SectionEnd 
-	Section "PyParsing 2.0.1" MODULE_PYPARSING
+	Section "PyParsing 2.0.2" MODULE_PYPARSING
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyparsing\PURELIB\*.*"
 	SectionEnd 
-	Section "Six 1.6.1" MODULE_SIX
+	Section "Six 1.8.0" MODULE_SIX
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File "${SOURCESFOLDER}\SIX\six-1.6.1\six.py"
 	SectionEnd 
-	Section "XLUtils 1.7.0" MODULE_XLUTILS
+	Section "XLUtils 1.7.1" MODULE_XLUTILS
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\xlutils\"
-		File /r "${SOURCESFOLDER}\XLUTILS\xlutils-1.7.0\xlutils\*.*"
+		File /r "${SOURCESFOLDER}\XLUTILS\xlutils-1.7.1\xlutils\*.*"
 	SectionEnd
-	Section "xlrd 0.9.2" MODULE_XLRD
+	Section "xlrd 0.9.3" MODULE_XLRD
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\xlrd\"
-		File /r "${SOURCESFOLDER}\xlrd\xlrd-0.9.2\xlrd\*.*"
+		File /r "${SOURCESFOLDER}\xlrd\xlrd-0.9.3\xlrd\*.*"
 	SectionEnd
 	Section "xlwt 0.7.5" MODULE_XLWT
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\xlwt\"
 		File /r "${SOURCESFOLDER}\xlwt\xlwt-0.7.5\xlwt\*.*"
 	SectionEnd
-	Section "OpenPyXL 1.8.5" MODULE_OPENPYXL
+	Section "OpenPyXL 2.1.0" MODULE_OPENPYXL
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\openpyxl\"
-		File /r "${SOURCESFOLDER}\openpyxl\openpyxl-1.8.5\openpyxl\*.*"
+		File /r "${SOURCESFOLDER}\openpyxl\openpyxl-2.1.0\openpyxl\*.*"
 	SectionEnd
 SectionGroupEnd
 
